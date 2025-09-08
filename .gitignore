@@ -1,0 +1,21 @@
+# ---- Maven / Spring Boot ----
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# ---- IDE / Editors ----
+.vscode/
+.idea/
+*.iml
+
+# ---- Logs ----
+*.log
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+
+# ---- Other ----
+*.swp
