@@ -1,19 +1,34 @@
 package com.noteskeeper;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Note {
-    private String text;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String content;
 
     public Note() {}
 
-    public Note(String text) {
-        this.text = text;
+    public Note(String content) {
+        this.content = content;
     }
 
-    public String getText() {
-        return text;
+    public Long getId() {
+        return id;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
